@@ -1,0 +1,122 @@
+.Todo{
+    padding: 70px 200px;
+}
+
+.createButton{
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+    margin-bottom: 70px;
+    margin-top: 10px;
+    border-radius: 12px;
+    padding: 20px 40px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #f3f4f6, #e2e8f0);;
+    transition: all 0.3s;
+    &:hover{
+        transform: translateY(-2px);
+        box-shadow: 0 5px 5px gray;
+    }
+    &:active{
+        box-shadow: #D6D6E7 0 3px 7px inset;
+        transform: translateY(2px);
+    }
+}
+.container{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 50px;
+    row-gap: 50px;
+}
+.containerElem {
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    border-top-left-radius: 50%;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #f3f4f6, #e2e8f0);
+    box-shadow: 0 2px 6px gray;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    animation: Enter 0.5s;
+} 
+ 
+.containerElem:hover {
+    transform: scale(1.1);
+    box-shadow: 0 30px 40px gray;
+}
+
+@keyframes Enter {
+     0%{
+        opacity: 0;
+        transform: translateY(1000px);
+     }
+     50%{
+        opacity: 1;
+        transform: translateX(500px);
+    }
+     100%{
+        opacity: 1;
+        transform: translateY(0);
+     }
+}
+.deleteButton {
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    background-color: pink;
+    color: white;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.deleteButton:hover {
+    background-color: #dc3545;
+}
+
+.eye{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: black;
+}
+.eyeIn{
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: #D6D6E7;
+    transform: translate(7px, 7px);
+    animation: eyesAnimation 4s infinite;
+}
+.eyes{
+    display: flex;
+    column-gap: 13px;
+    margin-bottom: 50px;
+}
+.catEars{
+    position: absolute;
+    width: 200px;
+    transform: translate(-59%, -58%);
+}
+
+@keyframes eyesAnimation{
+    0%{
+        transform: translate(7px, 8px);
+    }
+    25%{
+        transform: translate(13px, 4px);
+    }
+    50%{
+        transform: translate(8px, 13px);
+    }
+    75%{
+        transform: translate(8px, 1px);
+    }
+    100%{
+        transform: translate(7px,8px);
+    }
+}
